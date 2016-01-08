@@ -77,6 +77,7 @@ namespace LotteryChecker
                     var winNumber = ticket.Value.Intersect(winningNumbers).Count();
                     winNumber = IsBonusBall(winNumber, ticket, bonusBall) ? 7 : winNumber;  
                     var type = (WinTypes)winNumber;
+                    bool log = true;
 
                     switch (type)
                     {
@@ -102,7 +103,7 @@ namespace LotteryChecker
                         case WinTypes.Jackpot:
                             // Jackpot                            
                             Console.ForegroundColor = ConsoleColor.White;
-                            message = "You have won iether the jackpot!";
+                            message = "You have won the jackpot!";
                             break;
                         case WinTypes.BonusBall:
                             // 5 and the bonus ball £50,000
@@ -112,10 +113,11 @@ namespace LotteryChecker
                         default:
                             Console.ForegroundColor = ConsoleColor.DarkRed;
                             message = "You didnt win on this ticket!";
+                            log = false;
                             break;
                     }
 
-                    Console.WriteLine(string.Format("({1}) {0} {2}", message, ticket.Key, System.Environment.NewLine));
+                    if(log) Console.WriteLine(string.Format("({1}) {0} {2}", message, ticket.Key, System.Environment.NewLine));
                     output.Add(ticket.Key, string.Format("{0}", message ?? string.Empty));
                 }
                 catch (Exception)

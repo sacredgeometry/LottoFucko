@@ -1,0 +1,6 @@
+c:\users\brian.williams\documents\visual studio 2013\Projects\LotteryChecker\bin\Debug\LotteryChecker.exe.config
+c:\users\brian.williams\documents\visual studio 2013\Projects\LotteryChecker\bin\Debug\LotteryChecker.exe
+c:\users\brian.williams\documents\visual studio 2013\Projects\LotteryChecker\bin\Debug\LotteryChecker.pdb
+c:\users\brian.williams\documents\visual studio 2013\Projects\LotteryChecker\obj\Debug\LotteryChecker.exe
+c:\users\brian.williams\documents\visual studio 2013\Projects\LotteryChecker\obj\Debug\LotteryChecker.pdb
+c:\users\brian.williams\documents\visual studio 2013\Projects\LotteryChecker\obj\Debug\LotteryChecker.csprojResolveAssemblyReference.cache

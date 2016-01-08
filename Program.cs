@@ -11,12 +11,7 @@ namespace LotteryChecker
         static void Main(string[] args)
         {
             var numberCache = new NumberCache();
-            var results = numberCache.GetResults(new List<int>() { 11, 17, 22, 31, 53, 59 }, 1);
-
-            foreach (var result in results)
-            {
-                Console.WriteLine(string.Format("({1}) {0} {2}", result.Value, result.Key, System.Environment.NewLine));
-            }
+            var results = numberCache.GetResults(new List<int>() { 11, 12, 22, 31, 53, 59 }, 17);
 
             Console.ReadLine();
         }

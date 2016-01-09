@@ -8,6 +8,23 @@ namespace LotteryChecker
 {
     class Program
     {
+        public static void WriteWithColour (string input, ConsoleColor colour)
+        {
+            Console.ForegroundColor = colour;
+            Console.WriteLine(input);
+            Console.ResetColor();
+        }
+
+        public static bool IsWithinRange (int number)
+        {
+            if (number >= 1 && number <= 59)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         static void Main(string[] args)
         {
             var numberCache = new NumberCache();
@@ -26,20 +43,25 @@ namespace LotteryChecker
                     var numbers = Console.ReadLine().Split(',');
                     winningNumbers = numbers.Select(n => int.Parse(n)).ToList();
 
-                    if (winningNumbers.Count != 6)
+                    if (winningNumbers.Distinct().Count() != 6 || !winningNumbers.All(x => IsWithinRange(x)))
                     {
-                        Console.ForegroundColor = ConsoleColor.DarkRed;
-                        Console.WriteLine(failedComment);
+                        WriteWithColour(failedComment, ConsoleColor.DarkRed);
                         continue;
                     }
 
                     Console.WriteLine("Please enter the the bonus ball ...");
                     bonusBall = int.Parse(Console.ReadLine());
+
+                    if(!(IsWithinRange(bonusBall) && !winningNumbers.Contains(bonusBall)))
+                    {
+                        WriteWithColour(failedComment, ConsoleColor.DarkRed);
+                        bonusBall = 0;
+                        continue;
+                    }
                 }
                 catch (Exception ex)
                 {
-                    Console.ForegroundColor = ConsoleColor.DarkRed;
-                    Console.WriteLine(failedComment);
+                    WriteWithColour(failedComment, ConsoleColor.DarkRed);
                 }
             } while (winningNumbers.Count < 6 || bonusBall == 0);
 

@@ -10,3 +10,9 @@ C:\Dev\LottoFucko\LottoFucko\obj\Debug\LotteryChecker.pdb
 C:\Dev\LottoFucko\LottoFucko\bin\Debug\LotteryChecker.exe
 C:\Dev\LottoFucko\LottoFucko\bin\Debug\LotteryChecker.pdb
 C:\Dev\LottoFucko\LottoFucko\obj\Debug\LotteryChecker.csprojResolveAssemblyReference.cache
+C:\Users\brian.williams\Documents\Visual Studio 2013\Projects\LottoFucko\bin\Debug\LotteryChecker.exe.config
+C:\Users\brian.williams\Documents\Visual Studio 2013\Projects\LottoFucko\obj\Debug\LotteryChecker.exe
+C:\Users\brian.williams\Documents\Visual Studio 2013\Projects\LottoFucko\obj\Debug\LotteryChecker.pdb
+C:\Users\brian.williams\Documents\Visual Studio 2013\Projects\LottoFucko\bin\Debug\LotteryChecker.exe
+C:\Users\brian.williams\Documents\Visual Studio 2013\Projects\LottoFucko\bin\Debug\LotteryChecker.pdb
+C:\Users\brian.williams\Documents\Visual Studio 2013\Projects\LottoFucko\obj\Debug\LotteryChecker.csprojResolveAssemblyReference.cache

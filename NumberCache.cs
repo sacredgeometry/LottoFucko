@@ -117,7 +117,7 @@ namespace LotteryChecker
                             break;
                     }
 
-                    if(log) Console.WriteLine(string.Format("({1}) {0} {2}", message, ticket.Key, System.Environment.NewLine));
+                    if (log) Console.WriteLine(string.Format("({1}) {0} ({3}) {2}", message, ticket.Key, System.Environment.NewLine, string.Join(", ", ticket.Value.OrderBy(x => x))));
                     output.Add(ticket.Key, string.Format("{0}", message ?? string.Empty));
                 }
                 catch (Exception)
